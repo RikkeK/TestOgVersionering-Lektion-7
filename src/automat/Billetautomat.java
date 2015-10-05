@@ -31,7 +31,9 @@ public class Billetautomat {
 	 * Modtag nogle penge (i kroner) fra en kunde.
 	 */
 	public void indsætPenge(int beløb) {
-		balance = balance + beløb;
+		if (beløb > 0){
+			balance = balance + beløb;
+		}
 	}
 
 	/**
@@ -46,8 +48,9 @@ public class Billetautomat {
 	 * Opdater total og nedskriv balancen med billetprisen
 	 */
 	public void udskrivBillet() {
-		if (balance<10) {
+		if (balance < billetpris) {
 			System.out.println("Du mangler at indbetale nogle penge");
+			return;
 		}
 		System.out.println("##########B##T#########");
 		System.out.println("# BlueJ Trafikselskab #");

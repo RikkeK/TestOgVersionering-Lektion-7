@@ -7,6 +7,7 @@ public class Billetautomat {
 	private int balance; // Hvor mange penge kunden p.t. har puttet i automaten
 	private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
 	private boolean montørtilstand;
+	private int gammelTotal;
 
 	/**
 	 * Opret en billetautomat der sælger billetter til 10 kr.
@@ -15,6 +16,7 @@ public class Billetautomat {
 		billetpris = 10;
 		balance = 0;
 		antalBilletterSolgt = 0;
+		gammelTotal = 0;
 	}
 
 	/**
@@ -59,6 +61,7 @@ public class Billetautomat {
 		System.out.println();
 
 		antalBilletterSolgt = antalBilletterSolgt + 1;
+		gammelTotal = gammelTotal + billetpris;
 		balance = balance - billetpris; // Billetter koster 10 kroner
 	}
 
@@ -85,7 +88,7 @@ public class Billetautomat {
 
 	public int getTotal() {
 		if (montørtilstand) {
-			return billetpris * antalBilletterSolgt;
+			return gammelTotal;
 		} else {
 			System.out.println("Afvist - log ind først");
 			return 0;

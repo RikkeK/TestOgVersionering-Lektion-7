@@ -10,7 +10,7 @@ public class TjekMontørFunktion
 		int retur;
 		
 		retur = automat.getBilletpris();
-		if (retur != 10) {
+		if (retur != 100) {
 			System.out.println("FEJL, getBilletpris() != 10");
 		}
 

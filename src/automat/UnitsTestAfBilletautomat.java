@@ -15,7 +15,6 @@ public class UnitsTestAfBilletautomat {
 	@Test
 	public void testReturErNulHvisManIkkeHarSatPengeInd() {
 		Billetautomat automat = new Billetautomat();
-		automat.udskrivBillet();
 		assertEquals(0, automat.returpenge());
 		
 	}

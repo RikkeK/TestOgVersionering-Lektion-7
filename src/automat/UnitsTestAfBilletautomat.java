@@ -8,14 +8,21 @@ public class UnitsTestAfBilletautomat {
 
 	@Test
 	public void testGetBilletpris() {
-		Billetautomat b = new Billetautomat();
-		assertEquals(10, b.getBilletpris());
+		Billetautomat automat = new Billetautomat();
+		assertEquals(10, automat.getBilletpris());
 	}
 	
 	@Test
-	public void testGetBilletpris() {
-		Billetautomat b = new Billetautomat();
-		assertEquals(10, b.getBilletpris());
+	public void testReturErNulHvisManIkkeHarSatPengeInd() {
+		Billetautomat automat = new Billetautomat();
+		automat.udskrivBillet();
+		assertEquals(0, automat.returpenge());
+		
+
+		
+	
+		
+		
 	}
 
 }

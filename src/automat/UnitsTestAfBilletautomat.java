@@ -42,8 +42,11 @@ public class UnitsTestAfBilletautomat {
 	//Tjek af at man ikke kan sætte en billet til negative værdier
 	public void testAtManIkkeKanSætteBilletprisTilNegativeVærdier() {
 		Billetautomat automat = new Billetautomat();
+		automat.montørLogin("1234");
 		automat.setBilletpris(-20);
 		assertEquals(10, automat.getBilletpris());
+		
+	
 	
 
 		

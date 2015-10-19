@@ -1,7 +1,6 @@
 package automat;
 
 
-
 public class BenytBilletautomat
 {
 	public static void main(String[] arg)

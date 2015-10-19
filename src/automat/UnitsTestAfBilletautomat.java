@@ -45,8 +45,14 @@ public class UnitsTestAfBilletautomat {
 		automat.montørLogin("1234");
 		automat.setBilletpris(-20);
 		assertEquals(10, automat.getBilletpris());
+	}
 		
-	
+	@Test
+	//Tjek af at man ikke ændre billetpris uden at være logget ind som montør
+	public void testAtManIkkeKanÆndreBilletprisUdenAtVæreLoggetInd() {
+		Billetautomat automat = new Billetautomat();
+		automat.setBilletpris(20);
+		assertEquals(10, automat.getBilletpris());	
 	
 
 		

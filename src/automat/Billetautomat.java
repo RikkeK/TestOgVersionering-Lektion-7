@@ -77,7 +77,7 @@ public class Billetautomat {
 	}
 
 	
-	void montørLogin(String adgangskode) {
+	public void montørLogin(String adgangskode) {
 		if ("1234".equals(adgangskode)) {
 			montørtilstand = true;
 			System.out.println("Montørtilstand aktiveret");
